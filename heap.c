@@ -17,14 +17,7 @@ void siftdown(int n)
 {
 	int i, j, temp;
 
-	i = 1;
-	temp = x[i];
-	for (;;) {
-		j = 2 * i;
-
-		if (j > n)
-			break;
-
+	for (i = 1, temp = x[i]; (j = 2 * i) <= n; i = j) {
 		if ((j + 1 <= n) && (x[j + 1] < x[j]))
 			j++;
 
@@ -32,7 +25,6 @@ void siftdown(int n)
 			break;
 
 		x[i] = x[j];
-		i = j;
 	}
 	x[i] = temp;
 }
