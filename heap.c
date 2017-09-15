@@ -32,6 +32,7 @@ void siftdown(int n)
 			break;
 
 		x[i] = x[k];
+		i = k;
 	}
 	x[k] = temp;
 }
