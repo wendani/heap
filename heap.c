@@ -7,17 +7,8 @@ void siftup(int n)
 {
 	int i, j, temp;
 
-	i = n;
-	temp = y[i];
-	while (i > 1) {
-		j = i / 2;
-
-		if (y[j] <= temp)
-			break;
-
+	for (i = n, temp = y[i]; i > 1 && y[j = i / 2] > temp; i = j)
 		y[i] = y[j];
-		i = j;
-	}
 	y[i] = temp;
 }
 
