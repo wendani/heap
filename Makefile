@@ -1,9 +1,9 @@
 AM_CFLAGS := -g -Wall -O2
 
-CC        := g++
+CC        := gcc
 CFLAGS    := $(AM_CFLAGS)
 
-LD        := g++
+LD        := gcc
 
 APPS      := heap
 OBJS      := $(APPS).o
